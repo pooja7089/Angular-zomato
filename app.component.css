@@ -1,0 +1,24 @@
+.style {
+    background:red;
+    font-size:12;
+    text-align: center;
+    border-bottom: 100%;
+    background-image: -moz-element();
+
+
+}
+.location {
+    text-align: left;
+    height: 3em;
+    width:6em;
+    float: left;
+    border-radius:100%
+}
+div {
+    height:200px;
+    background-color: red;
+}
+title {
+    color: red;
+    
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<header class="flex-container flex-center">
+  <div  class="width-half">
+    <form [formGroup]='stateForm'>
+    <div class='pos-rel'>
+        <div class="col-md-12" style="font-size:22px">Your Location </div>
+        <input id='location' placeholder="search for your  location" (click)="restaurant()"fas icon='search' class='input-underline search-bar'type="restaurant">
+
+        <div class="col-md-36" style="text-align:center">
+            <div class="col-md-12" style="font-size:36px" background-color="color:red">Zomato Developer </div>
+            
+      <label for="search">
+        <li class='fa fa-search icon-pos color-red'></mdb-icon>
+      </label>
+      
+
+      <input id='search' placeholder="Search for restaurant,dishes........" (click)="restaurant()"fas icon='search' class='input-underline search-bar'type="restaurant">
+      <div clickOutside(clickOutside)="toggledropdown" class="state-container-center">
+      </div>
+      <div (click)="selectValue(s)" class='state'*ngFor='let of states |searchFilter:getSearchValue()'>
+        
+      </div>
+    </div>
+    </form>
+  </div>
+  <meta charset="utf-8">
+  <title>Zomato Developer</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+  body {
+    background-image: -moz-linear-gradient();
+    background-color:red
+  }
+</style>
+<body>
+  <div class="flex-containercard-container flex-wrap flex-center">
+    <div *ngFor='let s of states |searchFilter:getSearchValue()'class='flex-containercard-dimension card flex-center width'>
+      <div class='width-5'></div>
+      
+      <div class='width-5'></div>
+
+    </div>
+  </div>
+  <app-root>Loading..</app-root>
+</body>
+</html>
+
+
+  
+
